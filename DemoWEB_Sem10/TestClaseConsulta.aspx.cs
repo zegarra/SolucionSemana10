@@ -54,5 +54,10 @@ namespace DemoWEB_Sem10
         {
             lblCod2.Text = cbo2.SelectedValue.ToString();
         }
+
+        protected void grdDatos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

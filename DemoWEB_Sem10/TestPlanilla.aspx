@@ -22,12 +22,12 @@
                 <td style="width: 139px" class="style2">
                     Area:</td>
                 <td>
-                    <asp:ListBox ID="lstArea" runat="server" Height="120px" Width="148px">
+                    <asp:ListBox ID="lstArea" runat="server" Height="120px" Width="148px" OnSelectedIndexChanged="lstArea_SelectedIndexChanged">
                         <asp:ListItem Value="0">--Seleccione--</asp:ListItem>
-                        <asp:ListItem Value="1">Informatica</asp:ListItem>
-                        <asp:ListItem Value="2">Logistica</asp:ListItem>
-                        <asp:ListItem Value="3">Marketing</asp:ListItem>
-                        <asp:ListItem Value="4">Contabilidad</asp:ListItem>
+                        <asp:ListItem Value="3500">Informatica</asp:ListItem>
+                        <asp:ListItem Value="2000">Logistica</asp:ListItem>
+                        <asp:ListItem Value="2500">Marketing</asp:ListItem>
+                        <asp:ListItem Value="1900">Contabilidad</asp:ListItem>
                     </asp:ListBox>
                 </td>
             </tr>
@@ -36,13 +36,13 @@
                     Estado Civil:<br />
                 </td>
                 <td style="height: 22px" >
-                    <asp:DropDownList ID="cboEC" runat="server" Width="161px">
+                    <asp:DropDownList ID="cboEC" runat="server" Width="161px" OnSelectedIndexChanged="cboEC_SelectedIndexChanged">
                         <asp:ListItem Selected="True" Value="0">--Seleccione--</asp:ListItem>
-                        <asp:ListItem Value="1">Soltero</asp:ListItem>
-                        <asp:ListItem Value="2">Casado</asp:ListItem>
-                        <asp:ListItem Value="3">Divorciado</asp:ListItem>
-                        <asp:ListItem Value="4">Viudo</asp:ListItem>
-                        <asp:ListItem Value="5">Conviviente</asp:ListItem>
+                        <asp:ListItem Value="100">Soltero</asp:ListItem>
+                        <asp:ListItem Value="200">Casado</asp:ListItem>
+                        <asp:ListItem Value="500">Divorciado</asp:ListItem>
+                        <asp:ListItem Value="300">Viudo</asp:ListItem>
+                        <asp:ListItem Value="200">Conviviente</asp:ListItem>
                     </asp:DropDownList>
                     <br />
                 </td>
@@ -50,35 +50,35 @@
             <tr>
                 <td style="width: 139px" class="style2">
                     Num. Hijos:</td>
-                <td ><asp:DropDownList ID="cboHijos" runat="server" Width="161px">
+                <td ><asp:DropDownList ID="cboHijos" runat="server" Width="161px" OnSelectedIndexChanged="cboHijos_SelectedIndexChanged">
                     <asp:ListItem Selected="True">0</asp:ListItem>
-                    <asp:ListItem>1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
-                    <asp:ListItem>4</asp:ListItem>
-                    <asp:ListItem>5</asp:ListItem>
-                    <asp:ListItem>6</asp:ListItem>
+                    <asp:ListItem Value="200">1</asp:ListItem>
+                    <asp:ListItem Value="400">2</asp:ListItem>
+                    <asp:ListItem Value="600">3</asp:ListItem>
+                    <asp:ListItem Value="800">4</asp:ListItem>
+                    <asp:ListItem Value="1000">5</asp:ListItem>
+                    <asp:ListItem Value="0">6</asp:ListItem>
                 </asp:DropDownList></td>
             </tr>
             <tr>
                 <td style="width: 139px; height: 22px;" class="style2">
                     Nivel:</td>
                 <td style="height: 22px" >
-                    <asp:DropDownList ID="cboNivel" runat="server" Width="161px">
+                    <asp:DropDownList ID="cboNivel" runat="server" Width="161px" OnSelectedIndexChanged="cboNivel_SelectedIndexChanged">
                         <asp:ListItem Value="0">--Seleccione--</asp:ListItem>
-                        <asp:ListItem Value="1">Cursando</asp:ListItem>
-                        <asp:ListItem Value="2">Egresado</asp:ListItem>
-                        <asp:ListItem Value="3">Bachiller</asp:ListItem>
-                        <asp:ListItem Value="4">Titulado</asp:ListItem>
+                        <asp:ListItem Value="150">Cursando</asp:ListItem>
+                        <asp:ListItem Value="200">Egresado</asp:ListItem>
+                        <asp:ListItem Value="300">Bachiller</asp:ListItem>
+                        <asp:ListItem Value="400">Titulado</asp:ListItem>
                     </asp:DropDownList></td>
             </tr>
             <tr>
                 <td class="auto-style3" style="width: 139px; height: 20px;">
                     Descuentos:</td>
                 <td style="height: 20px">
-                    <asp:CheckBox ID="chkESSalud" runat="server" Text="ESSalud" CssClass="style4" />
+                    <asp:CheckBox ID="chkESSalud" runat="server"  Text="ESSalud" CssClass="style4" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:CheckBox ID="chkAFP" runat="server" Text="AFP" CssClass="style4" /></td>
+                    <asp:CheckBox ID="chkAFP" runat="server"  Text="AFP" CssClass="style4" /></td>
             </tr>
             <tr>
                 <td class="auto-style3" style="width: 139px; height: 20px;">
@@ -91,11 +91,11 @@
                 <td class="auto-style3" style="width: 139px; height: 20px;">
                     Condicion:</td>
                 <td style="height: 20px" >
-                    <asp:RadioButton ID="optEsta" runat="server" GroupName="Tipo" Text="Estable" />
+                    <asp:RadioButton ID="optEsta" runat="server" GroupName="Tipo"  Text="Estable" />
 &nbsp;&nbsp;
-                    <asp:RadioButton ID="optCont" runat="server" GroupName="Tipo" Text="Contratado" />
+                    <asp:RadioButton ID="optCont" runat="server" GroupName="Tipo"  Text="Contratado" />
 &nbsp;
-                    <asp:RadioButton ID="optPract" runat="server" GroupName="Tipo" Text="Practicante" />
+                    <asp:RadioButton ID="optPract" runat="server" GroupName="Tipo"  Text="Practicante" />
                 </td>
             </tr>
             <tr>
@@ -103,7 +103,7 @@
                     &nbsp;</td>
                 <td >
                     <asp:Button ID="btnCalcularPago" runat="server" Text="Calcular Pago" 
-                        Width="150px"  /></td>
+                        Width="150px" OnClick="btnCalcularPago_Click"  /></td>
             </tr>
             <tr>
                 <td style="width: 139px" class="style2">
